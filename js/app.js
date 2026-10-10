@@ -97,7 +97,7 @@ function renderLocations (locationsData) {
                 <div class="card-info">
                     <h2>🌎 ${location.name}</h2>
                     <p class="info-label">Type: <span style="color: white;">${location.type}</span></p>
-                    <p class="info-label">Dimension: ${location.dimesion}</p>
+                    <p class="info-label">Dimension: ${location.dimension}</p>
                 </div>
             </article>
         `;   
@@ -204,7 +204,7 @@ btnLocations.addEventListener('click', async () => {
 // Evento: Click en Episodios
 btnEpisodes.addEventListener('click', async () => {
     setActiveButton(btnEpisodes);
-    const data = await fetchData('/episodes');
+    const data = await fetchData('/episode');
     renderEpisodes(data);
 });
 
